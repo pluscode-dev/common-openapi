@@ -1,0 +1,14 @@
+Currency:
+  type: string
+  example: "usd"
+
+Money:
+  description: A money item including its currency.
+  type: object
+  properties:
+    amount:
+      type: number
+      format: double
+      example: "1234.56"
+    currency:
+      $ref: "/#Currency"

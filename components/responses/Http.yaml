@@ -1,0 +1,113 @@
+ValidationError:
+  description: Invalid Input.
+  content:
+    application/json:
+      schema:
+        $ref: "./../../components/schemas/Errors.yaml#/ValidationError"
+  headers:
+    X-RateLimit-Limit:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitLimit"
+    X-RateLimit-Policy:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitPolicy"
+    X-RateLimit-Remaining:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitRemaining"
+    X-RateLimit-Reset:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitReset"
+
+Forbidden:
+  description: Forbidden.
+  content:
+    text/plain:
+      schema:
+        type: string
+        example: "Forbidden"
+    application/json:
+      schema:
+        type: object
+        properties:
+          message: 
+            type: string
+            example: "Forbidden"        
+  headers:
+    X-RateLimit-Limit:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitLimit"
+    X-RateLimit-Policy:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitPolicy"
+    X-RateLimit-Remaining:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitRemaining"
+    X-RateLimit-Reset:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitReset"
+
+NotFound:
+  description: Not Found.
+  content:
+    text/plain:
+      schema:
+        type: string
+        example: "Not Found"
+    application/json:
+      schema:
+        type: object
+        properties:
+          message: 
+            type: string
+            example: "Not Found"        
+  headers:
+    X-RateLimit-Limit:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitLimit"
+    X-RateLimit-Policy:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitPolicy"
+    X-RateLimit-Remaining:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitRemaining"
+    X-RateLimit-Reset:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitReset"
+
+
+TooManyRequests:
+  description: Too Many Requests.
+  content:
+    text/plain:
+      schema:
+        type: string
+        example: "Too Many Requests"
+    application/json:
+      schema:
+        type: object
+        properties:
+          message: 
+            type: string
+            example: "Too Many Requests"
+  headers:
+    X-RateLimit-Limit:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitLimit"
+    X-RateLimit-Policy:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitPolicy"
+    X-RateLimit-Remaining:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitRemaining"
+    X-RateLimit-Reset:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitReset"
+
+Unauthorized:
+  description: Unauthorized.
+  content:
+    text/plain:
+      schema:
+        type: string
+        example: "Unauthorized"    
+    application/json:
+      schema:
+        type: object
+        properties:
+          message: 
+            type: string
+            example: "Unauthorized"
+  headers:
+    X-RateLimit-Limit:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitLimit"
+    X-RateLimit-Policy:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitPolicy"
+    X-RateLimit-Remaining:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitRemaining"
+    X-RateLimit-Reset:
+      $ref: "./../parameters/headers/RateLimits.yaml#/XRateLimitReset"
+      

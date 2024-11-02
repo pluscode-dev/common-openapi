@@ -1,0 +1,38 @@
+Media:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 2332
+    name:
+      type: string
+      example: "Profile Photo"
+    file_name:
+      type: string
+      example: "file.jpeg"
+    mime_type:
+      type: string
+      enum:
+        - image/jpeg
+        - image/png
+        - application/pdf
+      example: image/jpeg
+    size:
+      description: Size in bytes.
+      type: integer
+      example: 12345
+    position:
+      description: >- 
+        Used for a list of media that need to be displayed in a certain order (index-based).
+      type: integer
+      example: 0
+    url:
+      type: string
+      format: uri
+      example: https://www.gstatic.com/webp/gallery/1.jpg
+    created_at:
+      $ref: "DateTime.yaml"
+      example: "2006-01-02T15:04:05+00:00"
+    updated_at:
+      $ref: "DateTime.yaml"
+      example: "2006-01-03T15:04:05+00:00"

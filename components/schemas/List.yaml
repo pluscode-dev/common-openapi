@@ -1,0 +1,40 @@
+Pagination:
+  type: object
+  properties:
+    count:
+      description: Number of items in this page.
+      type: integer
+      example: 20
+      x-faker:
+        fake: "20"
+    page:
+      description: Current page number.
+      type: integer
+      example: 1
+      x-faker:
+        fake: "1"
+    per_page:
+      description: Maximum number of items per page.
+      type: integer
+      example: 20
+      x-faker:
+        fake: "20"
+    total:
+      description: Total items available in the current query.
+      type: integer
+      example: 40
+      x-faker:
+        fake: "40"
+    total_pages:
+        description: Total number of available pages.
+        type: integer
+        example: 2
+        x-faker:
+          fake: "2"
+
+ListMetadata:          
+  type: object
+  properties:
+    pagination:
+      $ref: "/#Pagination"
+  

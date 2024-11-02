@@ -1,0 +1,6 @@
+Date:
+  description: A date.
+  in: query
+  name: "date"
+  schema:
+    $ref: "./../../schemas/Dates.yaml#/Date"

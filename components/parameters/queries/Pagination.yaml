@@ -1,0 +1,15 @@
+Page:
+  description: Page number to view, defaults to 1.
+  in: query
+  name: "page"
+  schema:
+    type: integer
+    example: 1
+    
+PerPage:
+  description: Maximum number of items per page, if max is _{n}_. Requesting per_page=_{n}+1_ will only return _{n}_ items (if available).
+  in: query
+  name: "per_page"
+  schema:
+    type: integer
+    example: 20
